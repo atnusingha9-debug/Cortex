@@ -56,6 +56,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
+        <script src="https://quge5.com/88/tag.min.js" data-zone="251740" async data-cfasync="false"></script>
       </head>
       <body className="min-h-screen bg-surface-950 antialiased">
         <PublishedArticlesProvider>
