@@ -1,7 +1,11 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://cortexai.com";
+  const baseUrl =
+    process.env.SITE_URL ||
+    process.env.URL ||
+    process.env.DEPLOY_URL ||
+    "https://stewiee-ai.netlify.app";
 
   const staticPages = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 1.0 },
@@ -12,9 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/terms`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.3 },
   ];
 
-  // In production, these would be dynamically generated from the CMS/DB
   const toolSlugs = [
-    "cortex-transcript",
+    "cortex-publish",
     "gpt-4",
     "claude",
     "midjourney",

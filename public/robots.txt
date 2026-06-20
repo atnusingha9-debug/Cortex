@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /dashboard/
 
-Sitemap: https://cortexai.com/sitemap.xml
+Sitemap: https://stewiee-ai.netlify.app/sitemap.xml
