@@ -7,7 +7,7 @@ const footerLinks = [
     links: [
       { label: "AI Tools Directory", href: "/tools" },
       { label: "Articles & Insights", href: "/articles" },
-      { label: "Video Transcript", href: "/video-to-text" },
+      { label: "All Tools", href: "/tools" },
       { label: "API Access", href: "#" },
     ],
   },

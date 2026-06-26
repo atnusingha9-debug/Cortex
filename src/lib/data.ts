@@ -15,21 +15,6 @@ export const toolCategories = [
 
 export const aiTools: AITool[] = [
   {
-    id: "cortex-publish",
-    name: "Cortex Publish",
-    tagline: "Auto-generate and publish articles from video URLs",
-    description:
-      "Private admin tool that extracts transcripts from YouTube, TikTok, and Instagram videos and automatically generates and publishes full articles to the site.",
-    category: "Productivity",
-    tags: ["transcript", "video", "publishing", "automation"],
-    pricing: "Free",
-    url: "/video-to-text",
-    icon: "FileText",
-    featured: false,
-    upvotes: 0,
-    gradient: "from-indigo-500 to-cyan-500",
-  },
-  {
     id: "gpt-4",
     name: "GPT-4o",
     tagline: "Multimodal reasoning across text, image, and audio",

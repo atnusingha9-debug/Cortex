@@ -73,7 +73,7 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-lg sm:text-xl text-surface-400 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Curated reviews, expert comparisons, and a powerful video transcript tool — 
+            Curated reviews and expert comparisons — 
             everything you need to harness AI, all in one place.
           </motion.p>
 
@@ -90,13 +90,7 @@ export function Hero() {
               Explore Tools
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link
-              href="/video-to-text"
-              className="inline-flex items-center gap-2 px-8 py-3.5 text-base font-medium text-surface-300 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:text-white transition-all duration-300"
-            >
-              <FileText className="w-4 h-4" />
-              Try Transcript Tool
-            </Link>
+
           </motion.div>
 
           <motion.div
@@ -113,10 +107,7 @@ export function Hero() {
               <span className="w-1.5 h-1.5 rounded-full bg-cortex-500" />
               12,000+ weekly readers
             </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-500" />
-              Free transcript tool
-            </span>
+
           </motion.div>
         </div>
       </motion.div>

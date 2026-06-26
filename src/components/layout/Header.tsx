@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/tools", label: "Tools" },
   { href: "/articles", label: "Articles" },
-  { href: "/video-to-text", label: "Publish" },
 ];
 
 export function Header() {
@@ -107,12 +106,7 @@ export function Header() {
                   ⌘K
                 </kbd>
               </button>
-              <Link
-                href="/video-to-text"
-                className="px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-cortex-500 to-accent-500 rounded-xl hover:from-cortex-400 hover:to-accent-400 transition-all duration-200 shadow-lg shadow-cortex-500/20"
-              >
-                Admin Tool
-              </Link>
+
             </div>
 
             <button
@@ -159,12 +153,7 @@ export function Header() {
                     </Link>
                   );
                 })}
-                <Link
-                  href="/video-to-text"
-                  className="block px-4 py-3 mt-2 text-sm font-medium text-center text-white bg-gradient-to-r from-cortex-500 to-accent-500 rounded-xl"
-                >
-                  Admin Video Tool
-                </Link>
+
               </div>
             </motion.div>
           )}

@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, Sparkles, ArrowRight, FileText } from "lucide-react";
 import { aiTools, articles } from "@/lib/data";
-import { usePublishedArticles } from "@/lib/PublishedArticlesContext";
 
 interface SearchModalProps {
   open: boolean;
@@ -17,9 +16,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  const { articles: publishedArticles } = usePublishedArticles();
-
-  const allArticles = [...publishedArticles, ...articles];
+  const allArticles = articles;
 
   useEffect(() => {
     if (open) {

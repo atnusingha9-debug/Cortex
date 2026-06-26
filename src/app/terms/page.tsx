@@ -25,7 +25,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-semibold text-white mb-3">2. Description of Service</h2>
             <p>
-              Cortex AI provides an AI tools directory, article hub, and video-to-text transcription service. The video transcript tool allows users to submit URLs from YouTube, TikTok, and Instagram for AI-powered transcription, summarization, and content optimization.
+              Cortex AI provides an AI tools directory and article hub. Users can explore curated AI tools, read expert reviews and comparisons, and stay informed about the latest developments in artificial intelligence.
             </p>
             <p className="mt-2">
               You agree to use the Service only for lawful purposes and in accordance with these Terms. You are responsible for any content you submit and for ensuring that your use does not violate any applicable laws or third-party rights.
@@ -58,7 +58,7 @@ export default function TermsPage() {
               The Service is provided &quot;as is&quot; without warranties of any kind, either express or implied. Cortex AI shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service.
             </p>
             <p className="mt-2">
-              We are not responsible for the accuracy, completeness, or usefulness of any AI-generated content. The video transcript tool is provided as a convenience and should not be relied upon as the sole source for critical decisions.
+              We are not responsible for the accuracy, completeness, or usefulness of any AI-generated content.
             </p>
           </section>
 
