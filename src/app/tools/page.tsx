@@ -49,10 +49,10 @@ export default function ToolsPage() {
             <Sparkles className="w-3 h-3 mr-1" />
             Directory
           </Badge>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
             AI Tools Directory
           </h1>
-          <p className="text-surface-400 max-w-2xl">
+          <p className="text-gray-500 max-w-2xl">
             Explore {aiTools.length} carefully curated AI tools across {new Set(aiTools.map((t) => t.category)).size} categories. Filter by category, pricing, or search for exactly what you need.
           </p>
         </motion.div>
@@ -68,10 +68,10 @@ export default function ToolsPage() {
           hasFilters={hasFilters}
         />
 
-        <div className="mt-8 mb-4 flex items-center justify-between text-sm text-surface-500">
+        <div className="mt-8 mb-4 flex items-center justify-between text-sm text-gray-400">
           <span>
             Showing{" "}
-            <span className="text-white font-medium">{filtered.length}</span> tool{filtered.length !== 1 ? "s" : ""}
+            <span className="text-gray-900 font-medium">{filtered.length}</span> tool{filtered.length !== 1 ? "s" : ""}
           </span>
         </div>
 
@@ -83,8 +83,8 @@ export default function ToolsPage() {
           </div>
         ) : (
           <div className="text-center py-20">
-            <p className="text-surface-500 text-lg mb-2">No tools found</p>
-            <p className="text-surface-600 text-sm">
+            <p className="text-gray-400 text-lg mb-2">No tools found</p>
+            <p className="text-gray-400 text-sm">
               Try adjusting your filters or search terms
             </p>
             {hasFilters && (

@@ -89,7 +89,7 @@ export function InternalLinkEngine({ currentSlug }: { currentSlug: string }) {
           <Link
             key={link.href}
             href={link.href}
-            className="inline-flex items-center gap-1.5 text-sm text-surface-300 hover:text-cortex-300 transition-colors bg-white/[0.03] hover:bg-white/[0.06] px-3 py-1.5 rounded-lg border border-white/5"
+            className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-cortex-300 transition-colors bg-gray-50 hover:bg-gray-100 px-3 py-1.5 rounded-lg border border-gray-200"
           >
             {link.label}
           </Link>

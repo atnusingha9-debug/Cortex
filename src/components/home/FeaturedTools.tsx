@@ -35,16 +35,16 @@ export function FeaturedTools() {
               <Sparkles className="w-3 h-3 mr-1" />
               Featured Tools
             </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               Curated AI Tools
             </h2>
-            <p className="text-surface-400 mt-2 max-w-xl">
+            <p className="text-gray-500 mt-2 max-w-xl">
               Hand-picked essentials spanning every category, from writing to video generation.
             </p>
           </div>
           <Link
             href="/tools"
-            className="inline-flex items-center gap-2 text-sm text-surface-400 hover:text-white transition-colors group"
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors group"
           >
             View all tools
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -73,8 +73,8 @@ export function FeaturedTools() {
                   </Badge>
                 </div>
 
-                <h3 className="text-lg font-semibold text-white mb-2">{tool.name}</h3>
-                <p className="text-sm text-surface-400 leading-relaxed mb-4 line-clamp-2">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{tool.name}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed mb-4 line-clamp-2">
                   {tool.tagline}
                 </p>
 
@@ -82,15 +82,15 @@ export function FeaturedTools() {
                   {tool.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 text-xs text-surface-500 bg-white/5 rounded-md"
+                      className="px-2 py-0.5 text-xs text-gray-500 bg-gray-100 rounded-md"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                  <div className="flex items-center gap-1.5 text-xs text-surface-500">
+                <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                  <div className="flex items-center gap-1.5 text-xs text-gray-400">
                     <ChevronUp className="w-3.5 h-3.5" />
                     <span>{tool.upvotes.toLocaleString()}</span>
                   </div>

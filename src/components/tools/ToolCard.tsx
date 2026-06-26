@@ -66,8 +66,8 @@ export function ToolCard({ tool, index }: ToolCardProps) {
           </Badge>
         </div>
 
-        <h3 className="text-lg font-semibold text-white mb-1.5">{tool.name}</h3>
-        <p className="text-sm text-surface-400 leading-relaxed mb-3 flex-1">
+        <h3 className="text-lg font-semibold text-gray-900 mb-1.5">{tool.name}</h3>
+        <p className="text-sm text-gray-500 leading-relaxed mb-3 flex-1">
           {tool.tagline}
         </p>
 
@@ -75,15 +75,15 @@ export function ToolCard({ tool, index }: ToolCardProps) {
           {tool.tags.slice(0, 4).map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 text-xs text-surface-500 bg-white/5 rounded-md"
+              className="px-2 py-0.5 text-xs text-gray-400 bg-gray-100 rounded-md"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="flex items-center justify-between pt-4 border-t border-white/5 mt-auto">
-          <div className="flex items-center gap-1.5 text-xs text-surface-500">
+        <div className="flex items-center justify-between pt-4 border-t border-gray-200 mt-auto">
+          <div className="flex items-center gap-1.5 text-xs text-gray-400">
             <ChevronUp className="w-3.5 h-3.5" />
             <span>{tool.upvotes.toLocaleString()}</span>
           </div>

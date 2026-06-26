@@ -52,7 +52,7 @@ export function TableOfContents({ chapters }: { chapters: { heading: string; lev
     <div className="sticky top-28 z-30">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 text-sm font-medium text-surface-400 hover:text-white transition-colors bg-surface-900/80 backdrop-blur-md border border-white/5 rounded-xl px-4 py-2.5 w-full"
+        className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors bg-white backdrop-blur-md border border-gray-200 rounded-xl px-4 py-2.5 w-full"
       >
         <ListTree className="w-4 h-4 text-cortex-400" />
         <span>Table of Contents</span>
@@ -71,7 +71,7 @@ export function TableOfContents({ chapters }: { chapters: { heading: string; lev
             transition={{ duration: 0.2 }}
             className="overflow-hidden mt-1"
           >
-            <div className="bg-surface-900/80 backdrop-blur-md border border-white/5 rounded-xl p-3 space-y-0.5">
+            <div className="bg-white backdrop-blur-md border border-gray-200 rounded-xl p-3 space-y-0.5">
               {items.map((item) => (
                 <button
                   key={item.id}
@@ -82,7 +82,7 @@ export function TableOfContents({ chapters }: { chapters: { heading: string; lev
                   className={`w-full text-left text-sm px-3 py-1.5 rounded-lg transition-all duration-200 ${
                     activeId === item.id
                       ? "bg-cortex-500/10 text-cortex-300 font-medium"
-                      : "text-surface-400 hover:text-surface-200 hover:bg-white/[0.02]"
+                      : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
                   }`}
                   style={{ paddingLeft: `${12 + (item.level - 2) * 16}px` }}
                 >

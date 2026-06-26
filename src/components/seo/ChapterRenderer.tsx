@@ -36,14 +36,14 @@ function renderTextBlocks(blocks: string[]) {
       return (
         <pre
           key={i}
-          className="bg-surface-900 rounded-xl p-4 overflow-x-auto text-sm text-surface-200 border border-white/5 mb-5 font-mono"
+          className="bg-gray-100 rounded-xl p-4 overflow-x-auto text-sm text-gray-700 border border-gray-200 mb-5 font-mono"
         >
           <code>{code}</code>
         </pre>
       );
     }
     return (
-      <p key={i} className="text-surface-300 leading-relaxed mb-5">
+      <p key={i} className="text-gray-600 leading-relaxed mb-5">
         {block}
       </p>
     );
@@ -60,10 +60,10 @@ function ToolProfileCard({
   chapterHeading: string;
 }) {
   return (
-    <div className="my-8 p-5 bg-surface-900/40 border border-white/5 rounded-xl">
-      <h3 className="text-lg font-bold text-white mb-3">{tool.heading}</h3>
+    <div className="my-8 p-5 bg-gray-50 border border-gray-200 rounded-xl">
+      <h3 className="text-lg font-bold text-gray-900 mb-3">{tool.heading}</h3>
       {tool.textBlocks.map((block, i) => (
-        <p key={i} className="text-surface-300 leading-relaxed mb-3">
+        <p key={i} className="text-gray-600 leading-relaxed mb-3">
           {block}
         </p>
       ))}
@@ -73,7 +73,7 @@ function ToolProfileCard({
             <div key={i} className="flex items-start gap-2">
               <span className="text-cortex-400 mt-1 shrink-0">&#9656;</span>
               <div>
-                <h4 className="text-sm font-semibold text-white">{feat}</h4>
+                <h4 className="text-sm font-semibold text-gray-900">{feat}</h4>
               </div>
             </div>
           ))}
@@ -111,8 +111,8 @@ export function ChapterRenderer({ chapters, focusKeyword, heroImage, heroAlt }: 
         const isH2 = chapter.level === 2;
         const HeadingTag = `h${chapter.level}` as "h2" | "h3" | "h4";
         const headingStyles: Record<number, string> = {
-          2: "text-xl sm:text-2xl font-bold text-white mt-12 mb-4",
-          3: "text-lg font-bold text-white mt-8 mb-3",
+          2: "text-xl sm:text-2xl font-bold text-gray-900 mt-12 mb-4",
+          3: "text-lg font-bold text-gray-900 mt-8 mb-3",
           4: "text-sm font-semibold text-cortex-300 uppercase tracking-wider mt-6 mb-2",
         };
 

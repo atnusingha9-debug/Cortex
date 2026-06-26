@@ -32,7 +32,7 @@ export function Hero() {
       {floatingIcons.map(({ Icon, x, y: yPos, delay, duration }, idx) => (
         <motion.div
           key={`float-icon-${idx}`}
-          className="absolute hidden md:block text-white/5"
+          className="absolute hidden md:block text-gray-200"
           style={{ left: x, top: yPos }}
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration, delay, repeat: Infinity, ease: "easeInOut" }}
@@ -49,8 +49,8 @@ export function Hero() {
             transition={{ delay: 0.1, duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cortex-500/10 border border-cortex-500/20 mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-cortex-400 animate-pulse-subtle" />
-            <span className="text-sm text-cortex-300 font-medium">
+            <span className="w-2 h-2 rounded-full bg-cortex-500 animate-pulse-subtle" />
+            <span className="text-sm text-cortex-600 font-medium">
               The #1 AI Tools Directory
             </span>
           </motion.div>
@@ -59,7 +59,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6"
           >
             Discover the{" "}
             <span className="text-gradient">Best AI Tools</span>
@@ -71,7 +71,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-lg sm:text-xl text-surface-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             Curated reviews and expert comparisons — 
             everything you need to harness AI, all in one place.
@@ -97,7 +97,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="mt-12 flex items-center justify-center gap-8 text-sm text-surface-500"
+            className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-400"
           >
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
@@ -122,9 +122,9 @@ export function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-white/10 flex items-start justify-center p-1.5"
+          className="w-6 h-10 rounded-full border-2 border-gray-200 flex items-start justify-center p-1.5"
         >
-          <div className="w-1 h-3 rounded-full bg-white/30" />
+          <div className="w-1 h-3 rounded-full bg-gray-300" />
         </motion.div>
       </motion.div>
     </section>

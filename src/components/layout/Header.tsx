@@ -53,7 +53,7 @@ export function Header() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           isScrolled
-            ? "bg-surface-950/80 backdrop-blur-xl border-b border-white/5"
+            ? "bg-white/80 backdrop-blur-xl border-b border-gray-200"
             : "bg-transparent"
         )}
       >
@@ -63,7 +63,7 @@ export function Header() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cortex-400 to-accent-400 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">C</span>
               </div>
-              <span className="text-white font-semibold text-lg tracking-tight">
+              <span className="text-gray-900 font-semibold text-lg tracking-tight">
                 Cortex<span className="text-cortex-400">AI</span>
               </span>
             </Link>
@@ -78,15 +78,15 @@ export function Header() {
                     className={cn(
                       "relative px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200",
                       isActive
-                        ? "text-white"
-                        : "text-surface-400 hover:text-white hover:bg-white/5"
+                        ? "text-gray-900"
+                        : "text-gray-500 hover:text-gray-900 hover:bg-gray-100"
                     )}
                   >
                     {link.label}
                     {isActive && (
                       <motion.div
                         layoutId="nav-indicator"
-                        className="absolute inset-0 bg-white/5 rounded-lg border border-white/10"
+                        className="absolute inset-0 bg-gray-100 rounded-lg border border-gray-200"
                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                       />
                     )}
@@ -98,11 +98,11 @@ export function Header() {
             <div className="hidden md:flex items-center gap-3">
               <button
                 onClick={() => setSearchOpen(true)}
-                className="flex items-center gap-2 px-4 py-2 text-sm text-surface-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                className="flex items-center gap-2 px-4 py-2 text-sm text-gray-500 hover:text-gray-900 transition-colors rounded-lg hover:bg-gray-100"
               >
                 <Search className="w-4 h-4" />
                 <span>Search</span>
-                <kbd className="hidden lg:inline-flex px-1.5 py-0.5 text-xs text-surface-500 bg-white/5 rounded border border-white/10">
+                <kbd className="hidden lg:inline-flex px-1.5 py-0.5 text-xs text-gray-400 bg-gray-100 rounded border border-gray-200">
                   ⌘K
                 </kbd>
               </button>
@@ -111,7 +111,7 @@ export function Header() {
 
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="md:hidden p-2 text-surface-400 hover:text-white transition-colors"
+              className="md:hidden p-2 text-gray-500 hover:text-gray-900 transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -126,12 +126,12 @@ export function Header() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden border-t border-white/5 bg-surface-950/95 backdrop-blur-xl"
+              className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-xl"
             >
               <div className="px-4 py-4 space-y-1">
                 <button
                   onClick={() => { setSearchOpen(true); setIsMobileOpen(false); }}
-                  className="flex items-center gap-2 w-full px-4 py-3 rounded-lg text-sm text-surface-400 hover:text-white hover:bg-white/5 transition-colors"
+                  className="flex items-center gap-2 w-full px-4 py-3 rounded-lg text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors"
                 >
                   <Search className="w-4 h-4" />
                   Search tools & articles
@@ -145,8 +145,8 @@ export function Header() {
                       className={cn(
                         "block px-4 py-3 rounded-lg text-sm font-medium transition-colors",
                         isActive
-                          ? "text-white bg-white/10"
-                          : "text-surface-400 hover:text-white hover:bg-white/5"
+                          ? "text-gray-900 bg-gray-100"
+                          : "text-gray-500 hover:text-gray-900 hover:bg-gray-100"
                       )}
                     >
                       {link.label}

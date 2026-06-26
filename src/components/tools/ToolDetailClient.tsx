@@ -21,7 +21,7 @@ export function ToolDetailClient({ tool, related }: { tool: AITool; related: AIT
         >
           <Link
             href="/tools"
-            className="inline-flex items-center gap-2 text-sm text-surface-500 hover:text-white transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-gray-900 transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to tools
@@ -44,7 +44,7 @@ export function ToolDetailClient({ tool, related }: { tool: AITool; related: AIT
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2">
-              <h1 className="text-2xl sm:text-3xl font-bold text-white">{tool.name}</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">{tool.name}</h1>
               <Badge
                 variant={
                   tool.pricing === "Free"
@@ -57,7 +57,7 @@ export function ToolDetailClient({ tool, related }: { tool: AITool; related: AIT
                 {tool.pricing}
               </Badge>
             </div>
-            <p className="text-surface-400 text-lg">{tool.tagline}</p>
+            <p className="text-gray-500 text-lg">{tool.tagline}</p>
           </div>
         </motion.div>
 
@@ -67,19 +67,19 @@ export function ToolDetailClient({ tool, related }: { tool: AITool; related: AIT
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <Card className="p-6 mb-8">
-            <p className="text-surface-300 leading-relaxed mb-6">{tool.description}</p>
+            <p className="text-gray-600 leading-relaxed mb-6">{tool.description}</p>
             <div className="flex flex-wrap gap-2 mb-6">
               {tool.tags.map((tag: string) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 text-xs text-surface-400 bg-white/5 rounded-full border border-white/5"
+                  className="px-3 py-1 text-xs text-gray-400 bg-gray-100 rounded-full border border-gray-200"
                 >
                   #{tag}
                 </span>
               ))}
             </div>
-            <div className="flex items-center justify-between pt-4 border-t border-white/5">
-              <div className="flex items-center gap-1.5 text-sm text-surface-500">
+            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+              <div className="flex items-center gap-1.5 text-sm text-gray-400">
                 <ChevronUp className="w-4 h-4" />
                 <span>{tool.upvotes.toLocaleString()} upvotes</span>
               </div>
@@ -102,15 +102,15 @@ export function ToolDetailClient({ tool, related }: { tool: AITool; related: AIT
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <h2 className="text-xl font-bold text-white mb-4">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
               More in {tool.category}
             </h2>
             <div className="grid sm:grid-cols-3 gap-4">
               {related.map((r) => (
                 <Link key={r.id} href={`/tools/${r.id}`}>
                   <Card hover className="p-4 h-full">
-                    <h3 className="text-sm font-semibold text-white mb-1">{r.name}</h3>
-                    <p className="text-xs text-surface-500 line-clamp-2">{r.tagline}</p>
+                    <h3 className="text-sm font-semibold text-gray-900 mb-1">{r.name}</h3>
+                    <p className="text-xs text-gray-400 line-clamp-2">{r.tagline}</p>
                   </Card>
                 </Link>
               ))}

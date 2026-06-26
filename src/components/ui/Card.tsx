@@ -19,7 +19,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         viewport={{ once: true, margin: "-50px" }}
         whileHover={hover ? { y: -4, transition: { duration: 0.2 } } : undefined}
         className={cn(
-          "rounded-2xl border border-white/5 bg-surface-900/50 backdrop-blur-sm overflow-hidden",
+          "rounded-2xl bg-white border border-gray-200 shadow-sm overflow-hidden",
           glow && "glow-border",
           hover && "cursor-pointer",
           className

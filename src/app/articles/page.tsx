@@ -30,10 +30,10 @@ export default function ArticlesPage() {
             <Sparkles className="w-3 h-3 mr-1" />
             Insights
           </Badge>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
             Articles & Insights
           </h1>
-          <p className="text-surface-400 max-w-2xl">
+          <p className="text-gray-500 max-w-2xl">
             In-depth analysis, expert comparisons, and breaking news from the cutting edge of artificial intelligence.
           </p>
         </motion.div>
@@ -47,7 +47,7 @@ export default function ArticlesPage() {
                 "px-3.5 py-1.5 text-sm font-medium rounded-lg border transition-all duration-200",
                 category === cat
                   ? "bg-cortex-500/10 border-cortex-500/30 text-cortex-300"
-                  : "bg-transparent border-white/5 text-surface-400 hover:text-white hover:border-white/10"
+                  : "bg-transparent border-gray-200 text-gray-500 hover:text-gray-900 hover:border-gray-200"
               )}
             >
               {cat}
@@ -73,26 +73,26 @@ export default function ArticlesPage() {
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-r from-surface-900/50 via-transparent to-transparent sm:bg-gradient-to-l sm:from-surface-900/50 sm:via-transparent sm:to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-gray-900/40 via-transparent to-transparent sm:bg-gradient-to-l sm:from-gray-900/40 sm:via-transparent sm:to-transparent" />
                     </div>
                     <div className="p-6 flex flex-col justify-center flex-1">
                       <div className="flex items-center gap-2 mb-3">
                         <Badge variant="default">{article.category}</Badge>
-                        <span className="flex items-center gap-1 text-xs text-surface-500">
+                        <span className="flex items-center gap-1 text-xs text-gray-400">
                           <Clock className="w-3 h-3" />
                           {article.readTime} min read
                         </span>
                       </div>
-                      <h2 className="text-lg font-semibold text-white mb-2 leading-snug">
+                      <h2 className="text-lg font-semibold text-gray-900 mb-2 leading-snug">
                         {article.title}
                       </h2>
-                      <p className="text-sm text-surface-400 leading-relaxed line-clamp-2 mb-3">
+                      <p className="text-sm text-gray-500 leading-relaxed line-clamp-2 mb-3">
                         {article.excerpt}
                       </p>
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-xs text-surface-500">
-                          <span className="text-surface-400">{article.author}</span>
-                          <span className="w-1 h-1 rounded-full bg-surface-600" />
+                        <div className="flex items-center gap-2 text-xs text-gray-400">
+                          <span className="text-gray-700">{article.author}</span>
+                          <span className="w-1 h-1 rounded-full bg-gray-300" />
                           <span>{formatDate(article.date)}</span>
                         </div>
                         <span className="inline-flex items-center gap-1 text-xs font-medium text-cortex-400 transition-all">

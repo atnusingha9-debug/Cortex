@@ -85,7 +85,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
           }}
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
 
           {/* Modal */}
           <motion.div
@@ -93,25 +93,25 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="relative w-full max-w-2xl bg-surface-900 border border-white/10 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
+            className="relative w-full max-w-2xl bg-white border border-gray-200 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
           >
             {/* Search input */}
-            <div className="flex items-center gap-3 px-5 py-4 border-b border-white/5">
-              <Search className="w-5 h-5 text-surface-500 shrink-0" />
+            <div className="flex items-center gap-3 px-5 py-4 border-b border-gray-200">
+              <Search className="w-5 h-5 text-gray-400 shrink-0" />
               <input
                 ref={inputRef}
                 type="text"
                 placeholder="Search tools, articles, topics..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="flex-1 bg-transparent text-white text-base placeholder-surface-500 focus:outline-none"
+                className="flex-1 bg-transparent text-gray-900 text-base placeholder-gray-400 focus:outline-none"
               />
               {query && (
-                <button onClick={() => setQuery("")} className="text-surface-500 hover:text-white transition-colors">
+                <button onClick={() => setQuery("")} className="text-gray-400 hover:text-gray-900 transition-colors">
                   <X className="w-4 h-4" />
                 </button>
               )}
-              <kbd className="hidden sm:inline-flex px-2 py-0.5 text-xs text-surface-500 bg-white/5 rounded border border-white/10">
+              <kbd className="hidden sm:inline-flex px-2 py-0.5 text-xs text-gray-400 bg-gray-100 rounded border border-gray-200">
                 ESC
               </kbd>
             </div>
@@ -119,40 +119,40 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
             {/* Results */}
             <div className="max-h-[60vh] overflow-y-auto">
               {!query.trim() && (
-                <div className="p-8 text-center text-sm text-surface-600">
+                <div className="p-8 text-center text-sm text-gray-500">
                   Type to search across {aiTools.length} tools and {allArticles.length} articles
                 </div>
               )}
 
               {query.trim() && matchedTools.length === 0 && matchedArticles.length === 0 && (
-                <div className="p-8 text-center text-sm text-surface-500">
+                <div className="p-8 text-center text-sm text-gray-500">
                   No results for &quot;{query}&quot;
                 </div>
               )}
 
               {matchedTools.length > 0 && (
                 <div className="p-3 pb-0">
-                  <p className="px-3 py-1.5 text-xs font-medium text-surface-500 uppercase tracking-wider">
+                  <p className="px-3 py-1.5 text-xs font-medium text-gray-400 uppercase tracking-wider">
                     Tools ({matchedTools.length})
                   </p>
                   {matchedTools.slice(0, 5).map((tool) => (
                     <button
                       key={tool.id}
                       onClick={() => handleSelect(tool.url.startsWith("/") ? tool.url : `/tools/${tool.id}`)}
-                      className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl hover:bg-white/5 transition-colors text-left group"
+                      className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors text-left group"
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cortex-500/20 to-accent-500/20 flex items-center justify-center">
                         <Sparkles className="w-4 h-4 text-cortex-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium text-white truncate">{tool.name}</p>
-                        <p className="text-xs text-surface-500 truncate">{tool.tagline}</p>
+                        <p className="text-sm font-medium text-gray-900 truncate">{tool.name}</p>
+                        <p className="text-xs text-gray-500 truncate">{tool.tagline}</p>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-surface-600 group-hover:text-surface-400 transition-colors shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors shrink-0" />
                     </button>
                   ))}
                   {matchedTools.length > 5 && (
-                    <p className="px-3 py-2 text-xs text-surface-600">
+                    <p className="px-3 py-2 text-xs text-gray-500">
                       +{matchedTools.length - 5} more tools
                     </p>
                   )}
@@ -161,27 +161,27 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
 
               {matchedArticles.length > 0 && (
                 <div className="p-3">
-                  <p className="px-3 py-1.5 text-xs font-medium text-surface-500 uppercase tracking-wider">
+                  <p className="px-3 py-1.5 text-xs font-medium text-gray-400 uppercase tracking-wider">
                     Articles ({matchedArticles.length})
                   </p>
                   {matchedArticles.slice(0, 5).map((article) => (
                     <button
                       key={article.id}
                       onClick={() => handleSelect(`/articles/${article.id}`)}
-                      className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl hover:bg-white/5 transition-colors text-left group"
+                      className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors text-left group"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">
-                        <FileText className="w-4 h-4 text-surface-400" />
+                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">
+                        <FileText className="w-4 h-4 text-gray-500" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium text-white truncate">{article.title}</p>
-                        <p className="text-xs text-surface-500 truncate">{article.category} · {article.readTime} min read</p>
+                        <p className="text-sm font-medium text-gray-900 truncate">{article.title}</p>
+                        <p className="text-xs text-gray-500 truncate">{article.category} · {article.readTime} min read</p>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-surface-600 group-hover:text-surface-400 transition-colors shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors shrink-0" />
                     </button>
                   ))}
                   {matchedArticles.length > 5 && (
-                    <p className="px-3 py-2 text-xs text-surface-600">
+                    <p className="px-3 py-2 text-xs text-gray-500">
                       +{matchedArticles.length - 5} more articles
                     </p>
                   )}

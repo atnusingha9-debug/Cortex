@@ -48,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -58,7 +58,7 @@ export default function RootLayout({
         />
         <script src="https://quge5.com/88/tag.min.js" data-zone="251740" async data-cfasync="false"></script>
       </head>
-      <body className="min-h-screen bg-surface-950 antialiased">
+      <body className="min-h-screen bg-white antialiased">
           <Header />
           <main>{children}</main>
           <Footer />

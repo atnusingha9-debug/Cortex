@@ -8,8 +8,8 @@
   }
 
   body {
-    background-color: #0f1014;
-    color: #c5c9d8;
+    background-color: #ffffff;
+    color: #4a4e60;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -20,7 +20,7 @@
   }
 
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }
 
@@ -55,10 +55,10 @@
   }
 
   .glass-panel {
-    background: rgba(26, 28, 35, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .hide-scrollbar {
