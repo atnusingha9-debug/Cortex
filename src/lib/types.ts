@@ -1,3 +1,5 @@
+import type { Chapter } from "./content-types";
+
 export interface AITool {
   id: string;
   name: string;
@@ -36,8 +38,11 @@ export interface Article {
   date: string;
   readTime: number;
   image: string;
+  imageAlt?: string;
   tags: string[];
   featured: boolean;
+  focusKeyword?: string;
+  chapters?: Chapter[];
 }
 
 export interface ProcessingStep {
