@@ -4,6 +4,7 @@ const relatedContent: Record<string, { href: string; label: string }[]> = {
   "future-of-ai-agents-2026": [
     { href: "/ai-coding-assistants", label: "AI coding assistants" },
     { href: "/build-ai-agent-2026-guide", label: "Build your own AI agent" },
+    { href: "/how-does-generative-ai-differ-in-its-output-compared-to-traditional-ai", label: "Generative vs. traditional AI output" },
   ],
   "openai-gpt-5-preview": [
     { href: "/chatgpt-vs-claude-vs-gemini-2026", label: "ChatGPT vs Claude vs Gemini" },
@@ -16,6 +17,7 @@ const relatedContent: Record<string, { href: string; label: string }[]> = {
   "ai-coding-tools-2026": [
     { href: "/ai-code-generation-complete-guide", label: "AI code generation guide" },
     { href: "/ai-coding-assistants", label: "AI coding assistants" },
+    { href: "/how-does-generative-ai-differ-in-its-output-compared-to-traditional-ai", label: "Generative vs. traditional AI output" },
   ],
   "ai-video-generation-evolution": [
     { href: "/ai-video-editing-beginners-guide", label: "AI video editing for beginners" },
@@ -24,10 +26,12 @@ const relatedContent: Record<string, { href: string; label: string }[]> = {
   "ethical-ai-enterprise": [
     { href: "/future-of-ai-agents-2026", label: "Future of AI agents" },
     { href: "/ai-for-small-business-automation", label: "AI for small business" },
+    { href: "/how-does-generative-ai-differ-in-its-output-compared-to-traditional-ai", label: "Generative vs. traditional AI output" },
   ],
   "best-ai-tools-content-creation-2026": [
     { href: "/ai-tools-for-studying", label: "AI tools for studying" },
     { href: "/ai-video-generation-evolution", label: "AI video generation evolution" },
+    { href: "/how-does-generative-ai-differ-in-its-output-compared-to-traditional-ai", label: "Generative vs. traditional AI output" },
   ],
   "ai-video-editing-beginners-guide": [
     { href: "/video-transcription-ai-comparison", label: "Video transcription comparison" },
@@ -72,6 +76,11 @@ const relatedContent: Record<string, { href: string; label: string }[]> = {
   "ai-social-media-management-tools": [
     { href: "/ai-for-seo-tools-strategies", label: "AI for SEO strategies" },
     { href: "/best-ai-tools-content-creation-2026", label: "Best AI content creation tools" },
+  ],
+  "how-does-generative-ai-differ-in-its-output-compared-to-traditional-ai": [
+    { href: "/ai-coding-assistants", label: "AI coding assistants" },
+    { href: "/ai-tools-for-studying", label: "AI tools for studying" },
+    { href: "/build-ai-agent-2026-guide", label: "Build your own AI agent" },
   ],
 };
 
